@@ -81,9 +81,6 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground flex items-center gap-1">
-            Made with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> using Next.js & Tailwind CSS
-          </p>
           <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
