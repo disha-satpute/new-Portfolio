@@ -8,7 +8,6 @@ import { AchievementsSection } from "@/components/sections/achievements"
 import { ContactSection } from "@/components/sections/contact"
 import { Footer } from "@/components/sections/footer"
 import { AIChatAssistant } from "@/components/ai-assistant"
-import { CommandPalette } from "@/components/command-palette"
 
 export default function Home() {
   return (
@@ -25,7 +24,6 @@ export default function Home() {
       </main>
       <Footer />
       <AIChatAssistant />
-      <CommandPalette />
     </>
   )
 }
