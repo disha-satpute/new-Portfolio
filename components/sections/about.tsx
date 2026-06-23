@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { Code2, Brain, Rocket, Coffee, Database, Globe } from "lucide-react"
-import { skills } from "@/lib/data"
 
 const skillIcons = [
   { icon: Code2, label: "Frontend", color: "text-blue-500" },
@@ -143,31 +142,6 @@ export function AboutSection() {
           </motion.div>
         </div>
 
-        {/* Tech Stack */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="bg-card rounded-3xl p-8 border border-border"
-        >
-          <h3 className="text-xl font-bold mb-6 text-center">Technologies I Work With</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-            {[...skills.frontend.slice(0, 2), ...skills.backend.slice(0, 2), ...skills.aiml.slice(0, 2)].map((tech, index) => (
-              <motion.div
-                key={tech}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: 0.05 * index }}
-                whileHover={{ scale: 1.05, y: -2 }}
-                className="flex items-center justify-center px-4 py-3 bg-secondary rounded-xl text-sm font-medium border border-border hover:border-primary/50 transition-all cursor-default"
-              >
-                {tech}
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   )

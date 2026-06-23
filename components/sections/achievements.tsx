@@ -64,12 +64,18 @@ const underReviewPapers = [
 
 const currentActivity = {
   building: [
-    { text: "AI-powered personal productivity assistant", status: "In Progress" },
-    { text: "Open-source contribution tracker", status: "Planning" },
+     {
+    text: "AI-Powered Personal Productivity Assistant",
+    status: "In Progress"
+  },
+    {
+    text: "Agentic AI Workflow Automation Platform",
+    status: "Planning"
+  }
   ],
   learning: [
-    "System Design",
-    "Distributed Systems", 
+    "",
+    "", 
     "Advanced ML/AI",
   ],
 }
