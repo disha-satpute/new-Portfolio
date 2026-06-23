@@ -8,31 +8,31 @@ const skillCategories = [
 { key: "backend", label: "Backend" },
 { key: "database", label: "Database" },
 { key: "aiml", label: "AI & ML" },
-{ key: "tools", label: "Tools" },
+{ key: "tools", label: "Tools & Platforms" },
 ] as const
 
 export function SkillsSection() {
-return ( <section id="skills" className="py-24 px-6 bg-muted/30"> <div className="max-w-5xl mx-auto">
+return ( <section id="skills" className="py-16 md:py-20 px-6"> <div className="max-w-5xl mx-auto">
 <motion.div
 initial={{ opacity: 0, y: 20 }}
 whileInView={{ opacity: 1, y: 0 }}
 viewport={{ once: true }}
 transition={{ duration: 0.5 }}
 className="mb-12 text-center"
-> <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
-Tech Stack </h2>
+> <h2 className="text-sm uppercase tracking-[0.2em] text-primary mb-4">
+Skills & Technologies </h2>
 
+     <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <span className="gradient-text">Technologies</span>  I work with 
+          </h2>
 
-      <h3 className="text-3xl font-bold mb-4">
-        Technologies I Work With
-      </h3>
-
-      <p className="text-lg text-muted-foreground">
-        Tools, frameworks, and technologies I use to build scalable and impactful applications.
+      <p className="text-muted-foreground max-w-2xl mx-auto">
+        From enterprise backend systems and full-stack applications
+        to AI-powered solutions and research projects.
       </p>
     </motion.div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {skillCategories.map((category, index) => (
         <motion.div
           key={category.key}
@@ -40,20 +40,42 @@ Tech Stack </h2>
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{
-            duration: 0.5,
+            duration: 0.4,
             delay: index * 0.1,
           }}
-          className="rounded-2xl border bg-background p-6 shadow-sm hover:shadow-md transition-shadow"
+          className="
+            rounded-xl
+            border
+            border-border/50
+            bg-card
+            p-6
+            transition-all
+            duration-300
+            hover:border-primary/40
+            hover:shadow-lg
+          "
         >
-          <h3 className="text-lg font-semibold mb-4">
+          <h4 className="font-semibold text-lg mb-4">
             {category.label}
-          </h3>
+          </h4>
 
           <div className="flex flex-wrap gap-2">
             {skills[category.key].map((skill) => (
               <span
                 key={skill}
-                className="px-3 py-1 text-sm rounded-full bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
+                className="
+                  px-3
+                  py-1.5
+                  text-sm
+                  rounded-full
+                  border
+                  border-border
+                  bg-muted/40
+                  hover:bg-primary
+                  hover:text-primary-foreground
+                  transition-all
+                  duration-300
+                "
               >
                 {skill}
               </span>
